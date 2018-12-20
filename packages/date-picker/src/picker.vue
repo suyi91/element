@@ -390,7 +390,8 @@ export default {
     validateEvent: {
       type: Boolean,
       default: true
-    }
+    },
+    showWeekNumber: Boolean
   },
 
   components: { ElInput },
@@ -833,6 +834,7 @@ export default {
       this.picker.selectionMode = this.selectionMode;
       this.picker.unlinkPanels = this.unlinkPanels;
       this.picker.arrowControl = this.arrowControl || this.timeArrowControl || false;
+      this.picker.showWeekNumber = this.showWeekNumber;
       this.$watch('format', (format) => {
         this.picker.format = format;
       });

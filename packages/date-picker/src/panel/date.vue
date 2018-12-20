@@ -89,6 +89,7 @@
 
           <div class="el-picker-panel__content">
             <date-table
+              :show-week-number="showWeekNumber"
               v-show="currentView === 'date'"
               @pick="handleDatePick"
               :selection-mode="selectionMode"

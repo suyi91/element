@@ -1,3 +1,6 @@
+DatePicker type="week"
+enable "show-week-number"
+
 <p align="center">
   <img src="https://cdn.rawgit.com/ElemeFE/element/dev/element_logo.svg">
 </p>

@@ -33,7 +33,7 @@ export default {
       month10: 'Октябрь',
       month11: 'Ноябрь',
       month12: 'Декабрь',
-      week: 'неделя',
+      week: 'week',
       weeks: {
         sun: 'Вс',
         mon: 'Пн',

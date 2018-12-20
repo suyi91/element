@@ -14,7 +14,7 @@
     <tr
       class="el-date-table__row"
       v-for="(row, key) in rows"
-      :class="{ current: isWeekActive(row[1]) }"
+      :class="{ current: isWeekActive(row[showWeekNumber ? 2 : 1]) }"
       :key="key">
       <td
         v-for="(cell, key) in row"
@@ -148,9 +148,10 @@
           const row = rows[i];
 
           if (this.showWeekNumber) {
-            if (!row[0]) {
-              row[0] = { type: 'week', text: getWeekNumber(nextDate(startDate, i * 7 + 1)) };
+            if (row.length === 7) {
+              row.unshift(null);
             }
+            row[0] = { type: 'week', text: getWeekNumber(nextDate(startDate, i * 7 + 1)) };
           }
 
           for (let j = 0; j < 7; j++) {
@@ -299,7 +300,7 @@
       },
 
       getDateOfCell(row, column) {
-        const offsetFromStart = row * 7 + (column - (this.showWeekNumber ? 1 : 0)) - this.offsetDay;
+        const offsetFromStart = row * 7 + column - this.offsetDay;
         return nextDate(this.startDate, offsetFromStart);
       },
 

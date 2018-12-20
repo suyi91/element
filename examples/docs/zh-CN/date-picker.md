@@ -194,6 +194,7 @@
       v-model="value3"
       type="week"
       format="yyyy 第 WW 周"
+      show-week-number
       placeholder="选择周">
     </el-date-picker>
   </div>
@@ -438,6 +439,7 @@
 | start-placeholder | 范围选择时开始日期的占位内容 | string | — | — |
 | end-placeholder | 范围选择时结束日期的占位内容 | string | — | — |
 | type | 显示类型 | string | year/month/date/dates/ week/datetime/datetimerange/daterange | date |
+|show-week-number| 显示周次 | boolean | - | false |
 | format | 显示在输入框中的格式 | string | 见[日期格式](#/zh-CN/component/date-picker#ri-qi-ge-shi) | yyyy-MM-dd |
 | align | 对齐方式 | string | left, center, right | left |
 | popper-class | DatePicker 下拉框的类名 | string | — | — |

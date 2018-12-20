@@ -26,6 +26,9 @@
         }
       }
 
+      &.current .week div {
+        background-color: white;
+      }
       &.current div {
         background-color: $--datepicker-inrange-color;
       }
